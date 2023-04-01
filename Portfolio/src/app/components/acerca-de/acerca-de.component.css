@@ -32,6 +32,15 @@ div{
         top: 250px;
     }
 }
+@media(min-width: 1000px){
+    #fotoperfil{
+        position: absolute;
+        width: 17%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px #5700C5;
+        top:450px;
+    }
+}
 p{
     color: white;
 }
