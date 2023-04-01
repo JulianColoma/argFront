@@ -11,7 +11,9 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import  {  NgCircleProgressModule  }  from  'ng-circle-progress';
-import { HardSoftComponent } from './components/hard-soft/hard-soft.component' ;
+import { HardSoftComponent } from './components/hard-soft/hard-soft.component';
+import { ProyectsComponent } from './components/proyects/proyects.component';
+import { FooterComponent } from './components/footer/footer.component' ;
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HardSoftComponent } from './components/hard-soft/hard-soft.component' ;
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    HardSoftComponent
+    HardSoftComponent,
+    ProyectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
