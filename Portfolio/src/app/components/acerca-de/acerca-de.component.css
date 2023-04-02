@@ -29,10 +29,10 @@ div{
         border-radius: 100%;
         box-shadow: 3px 3px 3px #5700C5;
         left: 33%;
-        top: 250px;
+        top: 550px;
     }
 }
-@media(min-width: 1000px){
+@media(min-width: 2000px){
     #fotoperfil{
         position: absolute;
         width: 17%;
@@ -41,9 +41,6 @@ div{
         top:450px;
     }
 }
-p{
-    color: white;
-}
-h1{
+h1, p{
     color: white;
 }
