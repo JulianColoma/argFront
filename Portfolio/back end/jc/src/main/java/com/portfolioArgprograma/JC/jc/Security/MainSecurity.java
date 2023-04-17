@@ -23,9 +23,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class MainSecurity extends WebSecurityConfigurerAdapter{
+public class MainSecurity{
     @Autowired
-    UserDetailsImpl userDetailServiceImpl;
+    UserDetailsImpl userDetailsServiceImpl;
     @Autowired
     JwtEntryPoint jwtEntryPoint;
     
