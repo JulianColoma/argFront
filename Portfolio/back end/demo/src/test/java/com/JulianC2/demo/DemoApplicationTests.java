@@ -1,10 +1,10 @@
-package com.portfolioArgprograma.JC.jc;
+package com.JulianC2.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JcApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
