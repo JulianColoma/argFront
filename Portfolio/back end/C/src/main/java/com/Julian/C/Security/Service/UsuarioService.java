@@ -3,8 +3,8 @@ package com.Julian.C.Security.Service;
 
 import com.Julian.C.Security.Entity.Usuario;
 import com.Julian.C.Security.Repository.iUsuarioRepository;
-import jakarta.transaction.Transactional;
 import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

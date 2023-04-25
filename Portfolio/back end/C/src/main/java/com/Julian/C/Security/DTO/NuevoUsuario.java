@@ -59,5 +59,17 @@ public class NuevoUsuario {
     public void setRoles(Set<String> roles) {
         this.roles = roles;
     }
+    //constructor
+
+    public NuevoUsuario() {
+    }
+
+    public NuevoUsuario(String nombre, String nombreUsuario, String email, String password) {
+        this.nombre = nombre;
+        this.nombreUsuario = nombreUsuario;
+        this.email = email;
+        this.password = password;
+    }
+    
     
 }

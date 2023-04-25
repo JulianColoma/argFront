@@ -1,17 +1,19 @@
 
 package com.Julian.C.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import org.springframework.data.annotation.Id;
 
 @Entity
-public class Persona {
+public class Persona implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @javax.persistence.Id
     private Long id;
     
     @NotNull
@@ -26,6 +28,7 @@ public class Persona {
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String img;
 
+    //getters && setters
     public Long getId() {
         return id;
     }
@@ -57,6 +60,18 @@ public class Persona {
     public void setImg(String img) {
         this.img = img;
     }
+    
+    //constructor
+
+    public Persona() {
+    }
+
+    public Persona(String nombre, String apellido, String img) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
+    }
+    
     
     
 }

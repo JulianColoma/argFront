@@ -7,8 +7,8 @@ package com.Julian.C.Security.Service;
 import com.Julian.C.Security.Entity.Rol;
 import com.Julian.C.Security.Enums.RolNombre;
 import com.Julian.C.Security.Repository.iRolRepository;
-import jakarta.transaction.Transactional;
 import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

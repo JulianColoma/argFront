@@ -1,6 +1,6 @@
 package com.Julian.C.Security.DTO;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class LoginUsuario {
 
@@ -24,6 +24,15 @@ public class LoginUsuario {
     }
 
     public void setPassword(String password) {
+        this.password = password;
+    }
+    //constructor
+
+    public LoginUsuario() {
+    }
+
+    public LoginUsuario(String nombreUsuario, String password) {
+        this.nombreUsuario = nombreUsuario;
         this.password = password;
     }
     
