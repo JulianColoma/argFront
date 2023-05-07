@@ -8,7 +8,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'https://localhost:8080/skill/'
+  URL = "http://localhost:8080/skill/"
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skills[]>{
