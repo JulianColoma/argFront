@@ -10,11 +10,11 @@ import javax.validation.constraints.Size;
 import org.springframework.data.annotation.Id;
 
 @Entity
-public class Persona implements Serializable {
+public class Persona implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @javax.persistence.Id
-    private Long id;
+     private int id;
     
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
@@ -24,16 +24,17 @@ public class Persona implements Serializable {
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String apellido;
     
-    
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String img;
+    
+    @NotNull
+    private String descripcion;
 
     //getters && setters
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -60,17 +61,27 @@ public class Persona implements Serializable {
     public void setImg(String img) {
         this.img = img;
     }
-    
-    //constructor
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+ //constructor
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String img) {
+    public Persona(String nombre, String apellido, String img, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
+        this.descripcion = descripcion;
     }
+    
+    
     
     
     
