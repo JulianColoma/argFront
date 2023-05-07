@@ -1,10 +1,16 @@
 <div class="row">
   <h1>Hard & Soft skills</h1>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-light" routerLink="/newskill" *ngIf="isLogged">
+        Nueva Skill
+    </button>
+</div>
+ <div class="text-center col-sm-3 col-md-3 col-lg-3" *ngFor="let skill of skill">
   <circle-progress
-  [percent]="85"
+  [percent]="(skill.porcentaje)"
   [radius]="100"
-  [imageSrc]="'../assets/html.png'"
+  [imageSrc]="''"
+  [title]="(skill.nombre)"
   [imageHeight]="100"
   [imageWidth]="100"
   [showImage]="true"
@@ -17,132 +23,15 @@
   [showSubtitle]="false"
   [showUnits]="false"
 ></circle-progress>
+<td *ngIf="isLogged">
+  <button class="btn btn-light" routerLink="/edithys/{{skill.id}}">
+      <i class="bi bi-pencil-fill"></i></button>
+</td>
+<td *ngIf="isLogged">
+   <button class="btn btn-light" (click)="delete(skill.id)">
+      <i class="bi bi-trash-fill"></i></button>
+</td>
  </div>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
-  <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [imageSrc]="'../assets/CSS.png'"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [showImage]="true"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="4"
-  [outerStrokeColor]="'white'"
-  [innerStrokeColor]="'#C6B7D8'"
-  [animation]="true"
-  [animationDuration]="800"
-  [showSubtitle]="false"
-  [showUnits]="false"
-></circle-progress>
- </div>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
-  <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [imageSrc]="'../assets/js.png'"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [showImage]="true"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="4"
-  [outerStrokeColor]="'white'"
-  [innerStrokeColor]="'#C6B7D8'"
-  [animation]="true"
-  [animationDuration]="800"
-  [showSubtitle]="false"
-  [showUnits]="false"
-></circle-progress>
- </div>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
-  <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [imageSrc]="'../assets/git.png'"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [showImage]="true"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="4"
-  [outerStrokeColor]="'white'"
-  [innerStrokeColor]="'#C6B7D8'"
-  [animation]="true"
-  [animationDuration]="800"
-  [showSubtitle]="false"
-  [showUnits]="false"
-></circle-progress>
- </div>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
-  <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [imageSrc]="'../assets/eng.png'"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [showImage]="true"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="4"
-  [outerStrokeColor]="'white'"
-  [innerStrokeColor]="'#C6B7D8'"
-  [animation]="true"
-  [animationDuration]="800"
-  [showSubtitle]="false"
-  [showUnits]="false"
-></circle-progress>
- </div>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
-  <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [imageSrc]="'../assets/grupal.png'"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [showImage]="true"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="4"
-  [outerStrokeColor]="'white'"
-  [innerStrokeColor]="'#C6B7D8'"
-  [animation]="true"
-  [animationDuration]="800"
-  [showSubtitle]="false"
-  [showUnits]="false"
-></circle-progress>
- </div>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
-  <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [imageSrc]="'../assets/html.png'"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [showImage]="true"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="4"
-  [outerStrokeColor]="'white'"
-  [innerStrokeColor]="'#C6B7D8'"
-  [animation]="true"
-  [animationDuration]="800"
-  [showSubtitle]="false"
-  [showUnits]="false"
-></circle-progress>
- </div>
- <div class="text-center col-sm-3 col-md-3 col-lg-3">
-  <circle-progress
-  [percent]="85"
-  [radius]="100"
-  [imageSrc]="'../assets/html.png'"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [showImage]="true"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="4"
-  [outerStrokeColor]="'white'"
-  [innerStrokeColor]="'#C6B7D8'"
-  [animation]="true"
-  [animationDuration]="800"
-  [showSubtitle]="false"
-  [showUnits]="false"
-></circle-progress>
- </div>
+
 </div>
 

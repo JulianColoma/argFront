@@ -5,11 +5,12 @@ import { Observable } from 'rxjs';
 import { LoginUsuario } from '../model/login-usuario';
 import { JwtDto } from '../model/jwt-dto';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-authURL = 'http://localhost:8080/auth/'
+authURL = 'https://localhost:8080/auth/'
 
   constructor(private httpClient : HttpClient) { }
 
