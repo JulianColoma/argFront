@@ -2,11 +2,11 @@ export class Proyecto {
     id?: number;
     nombre: string;
     descripcion:string;
-    img: String;
+    link: String;
 
-    constructor(nombre: string, descripcion: string,img: string){
+    constructor(nombre: string, descripcion: string,link: string){
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.img = img;
+        this.link = link;
     }
 }

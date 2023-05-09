@@ -21,14 +21,14 @@ public class Proyecto {
     @NotNull
     private String descripcion;
     
-    private String img;
+    private String link;
     
     // constructores
 
-    public Proyecto(String nombre, String descripcion, String img) {
+    public Proyecto(String nombre, String descripcion, String link) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.img = img;
+        this.link = link;
     }
 
     public Proyecto() {
@@ -59,12 +59,12 @@ public class Proyecto {
         this.descripcion = descripcion;
     }
 
-    public String getImg() {
-        return img;
+    public String getLink() {
+        return link;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setLink(String link) {
+        this.link = link;
     }
     
     

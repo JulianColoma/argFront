@@ -16,7 +16,7 @@ export class ProyectoService {
     return this.httpClient.get<Proyecto[]>(this.URL + 'lista');
   }
   public detail(id: number): Observable<Proyecto>{
-    return this.httpClient.get<Proyecto>(this.URL +  `detail/${id} `);
+    return this.httpClient.get<Proyecto>(this.URL +  `detail/${id}`);
   }
   public save(proyecto: Proyecto): Observable<any>{
     return this.httpClient.post<any>(this.URL +  'create', proyecto);

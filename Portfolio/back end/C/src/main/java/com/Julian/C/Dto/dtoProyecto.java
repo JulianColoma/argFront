@@ -16,14 +16,14 @@ public class dtoProyecto {
     @NotBlank
     private String descripcion;
     @NotBlank
-    private String img;
+    private String link;
     
     // constructor
 
-    public dtoProyecto(String nombre, String descripcion, String img) {
+    public dtoProyecto(String nombre, String descripcion, String link) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.img = img;
+        this.link = link;
     }
 
     public dtoProyecto() {
@@ -46,12 +46,12 @@ public class dtoProyecto {
         this.descripcion = descripcion;
     }
 
-    public String getImg() {
-        return img;
+    public String getLink() {
+        return link;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImg(String link) {
+        this.link = link;
     }
     
 }

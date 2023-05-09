@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/proyectos")
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/proyecto")
+@CrossOrigin(origins = {"http://localhost:4200", "https://portfolioargprograma-44c4c.web.app/"})
 public class CProyecto {
      @Autowired
     SProyecto sProyecto;
@@ -61,7 +61,7 @@ public class CProyecto {
         if(sProyecto.existsByNombre(dtoproyecto.getNombre()))
             return new ResponseEntity(new Mensaje("Esa persona ya existe"), HttpStatus.BAD_REQUEST);
         
-        Proyecto proyecto = new Proyecto(dtoproyecto.getNombre(),dtoproyecto.getDescripcion(),dtoproyecto.getImg());
+        Proyecto proyecto = new Proyecto(dtoproyecto.getNombre(),dtoproyecto.getDescripcion(),dtoproyecto.getLink());
         sProyecto.save(proyecto);
         
         return new ResponseEntity(new Mensaje("Proyecto agregado"), HttpStatus.OK);
@@ -82,7 +82,7 @@ public class CProyecto {
         Proyecto proyecto = sProyecto.getOne(id).get();
         proyecto.setNombre(dtoproyecto.getNombre());
         proyecto.setDescripcion(dtoproyecto.getDescripcion());
-        proyecto.setImg(dtoproyecto.getImg());
+        proyecto.setLink(dtoproyecto.getLink());
         
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizada"), HttpStatus.OK);
