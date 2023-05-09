@@ -1,6 +1,8 @@
-<div class="container">
-    <div class="row">
-    <div>
+<section class="vh-100 gradient-custom">
+    <div class="container" >
+        <div class="row">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 ">
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             <div class="form-group">
                 <label for="nombreE">Nueva Skill</label>
@@ -10,6 +12,7 @@
                 <label for="porcentaje">porcentaje</label>
                 <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)] = "porcentaje" required>
             </div>
+            <br>
             <button class="btn btn-light">
                 Agregar Skill
     
@@ -18,3 +21,5 @@
     </div>
     </div>
     </div>
+    </div>
+</section>

@@ -18,25 +18,26 @@ div{
         border-radius: 100%;
         box-shadow: 3px 3px 3px #5700C5;
        
-    }
+    }   
 }
 @media(max-width: 575px){
     #fotoperfil{
         position: absolute;
-        width: 35%;
+        width: 25%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px #5700C5;
-        left: 33%;
-        top: 550px;
+        left: 38%;
+        top: 650px; 
     }
 }
-@media(min-width: 2000px){
+@media(min-width: 1500px){
     #fotoperfil{
         position: absolute;
-        width: 17%;
+        width: 20%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px #5700C5;
-        top:40px;
+        left: 1%;
+        top: 550px;
     }
 }
 h1, p{

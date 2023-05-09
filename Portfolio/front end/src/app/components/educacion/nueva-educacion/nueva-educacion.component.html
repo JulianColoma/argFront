@@ -1,6 +1,8 @@
-<div class="container">
-    <div class="row">
-    <div>
+<section class="vh-100 gradient-custom">
+    <div class="container" >
+        <div class="row">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 ">
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             <div class="form-group">
                 <label for="nombreE">nombre de la institucion</label>
@@ -10,6 +12,7 @@
                 <label for="descripcionE">descripcion de sus estudios </label>
                 <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)] = "descripcionE" required>
             </div>
+            <br>
             <button class="btn btn-light">
                 Agregar educacion
     
@@ -18,3 +21,5 @@
     </div>
     </div>
     </div>
+    </div>
+</section>

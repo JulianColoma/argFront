@@ -1,6 +1,8 @@
-<div class="container" *ngIf="persona">
-    <div class="row">
-        <div>
+<section class="vh-100 gradient-custom">
+    <div class="container" *ngIf="persona">
+        <div class="row">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 ">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreE">Nombre</label>
@@ -22,11 +24,13 @@
                     <img [src]="imageService.url" width="200px">
                 </div>
                 <br>
-                <button class="btn btn-primary">
+                <button class="btn btn-light">
                     Editar persona
                 </button>
             </form>
         </div>
     </div>
 </div>
+    </div>
+</section>
 
