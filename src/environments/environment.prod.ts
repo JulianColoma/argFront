@@ -10,5 +10,5 @@ export const environment = {
     measurementId: 'G-1Q3DEVKJR2',
   },
     production: true,
-    URL: ''
+    URL: 'https://backendjc-li3i.onrender.com/'
   };
